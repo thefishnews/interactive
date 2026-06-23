@@ -23,7 +23,7 @@ jobs:
       run: mvn clean package -DskipTests
 
     - name: Upload artifact
-uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: interactive-chat
         path: target/*.jar
