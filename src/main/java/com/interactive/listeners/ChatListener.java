@@ -30,7 +30,7 @@ public class ChatListener implements Listener {
             // Format and send message
             String formatted = formatMessage(message, player);
             
-            Bukkit.getScheduler().scheduleSyncTask(plugin, () -> {
+            Bukkit.getScheduler().runTask(plugin, () -> {
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     p.sendMessage(formatted);
                 }
