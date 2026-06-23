@@ -24,3 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: interactive-chat
+        path: target/*.jar
